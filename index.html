@@ -8,7 +8,25 @@
   <meta charset="UTF-8">
   <title>FABIO2020</title>
 </head>
-<body style="background-color:black; color:white">
-<h1>WORLD20</h1>
+<body>
+  <h1>WORLD20</h1>
+  <style>body{margin:0;}</style>
+  <canvas id='ltpcanvas'></canvas>
+  <script>
+    window.onload = function(){
+      init();
+      window.addEventListener('resize', init,false);
+    }
+    function init(){
+      var ltcp = document.getElementById('ltpcanvas')
+      var context = ltcp.getContext('2d')
+      var myWidth = window.innerWidth -5;
+      var myHeight = window.innerHeight -5;
+      context.canvas.width = myWidth;
+      context.canvas.height = myHeight;
+      context.fillStyle = '#00FFFF';
+      context.fillRect(00,myWidth,myHeight);
+    }
+  </script>
 </body>
 </html>
